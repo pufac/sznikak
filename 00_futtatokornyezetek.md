@@ -5,107 +5,107 @@ Mivel a dokumentum 56 oldalas, az első adagban az **általános alapfogalmakat 
 ---
 
 ## 1. dia: Címlap
-[cite_start]Az előadás a **Budapesti Műszaki és Gazdaságtudományi Egyetem (BME)** Automatizálási és Alkalmazott Informatikai Tanszékének (**AUT**) tananyaga[cite: 1, 3, 4, 5].
-* [cite_start]**Tárgy:** Szoftvertechnikák[cite: 1].
-* [cite_start]**Téma:** Futtatókörnyezetek[cite: 2].
+Az előadás a **Budapesti Műszaki és Gazdaságtudományi Egyetem (BME)** Automatizálási és Alkalmazott Informatikai Tanszékének (**AUT**) tananyaga.
+* **Tárgy:** Szoftvertechnikák.
+* **Téma:** Futtatókörnyezetek.
 * **Előadó:** Benedek Zoltán.
 
 ---
 
 ## 2. dia: Előadás demók
-[cite_start]Az oktató hangsúlyozza, hogy a gyakorlati megértéshez forráskódok is tartoznak[cite: 8].
-* [cite_start]**Forrás:** A demók a GitHubon érhetők el a `bmeviauab00/eloadas-demok` repóban[cite: 9].
-* [cite_start]**Használat:** Egyszerű `git clone` paranccsal letölthetők, és az előadások ütemében frissülnek[cite: 10, 11, 12].
-* [cite_start]**Szerkezet:** A fájlok között megtalálhatók a futtatókörnyezetekhez, nyelvi eszközökhöz és a WinUI-hoz tartozó példák[cite: 13, 14, 15].
+Az oktató hangsúlyozza, hogy a gyakorlati megértéshez forráskódok is tartoznak.
+* **Forrás:** A demók a GitHubon érhetők el a `bmeviauab00/eloadas-demok` repóban.
+* **Használat:** Egyszerű `git clone` paranccsal letölthetők, és az előadások ütemében frissülnek.
+* **Szerkezet:** A fájlok között megtalálhatók a futtatókörnyezetekhez, nyelvi eszközökhöz és a WinUI-hoz tartozó példák.
 
 ---
 
 ## 3. dia: Tartalomjegyzék
-[cite_start]Az előadás három fő blokkra oszlik[cite: 20]:
-1.  [cite_start]**Futtatókörnyezetek általánosságban:** Miért van rájuk szükség? [cite: 22]
-2.  [cite_start]**JAVA:** Rövid áttekintés a JVM-ről (ismétlés)[cite: 23, 24].
-3.  [cite_start]**.NET:** Részletes elemzés (CLR, fordítás, szerelvények)[cite: 25, 26, 27, 28, 29].
+Az előadás három fő blokkra oszlik:
+1.  **Futtatókörnyezetek általánosságban:** Miért van rájuk szükség? 
+2.  **JAVA:** Rövid áttekintés a JVM-ről (ismétlés).
+3.  **.NET:** Részletes elemzés (CLR, fordítás, szerelvények).
 
 ---
 
 ## 4. dia: Futtatókörnyezet (Runtime) fogalma
-[cite_start]A futtatókörnyezet egy **absztrakt számítógép architektúra**, egyfajta **virtuális gép (VM)**[cite: 30, 32, 33, 34].
+A futtatókörnyezet egy **absztrakt számítógép architektúra**, egyfajta **virtuális gép (VM)**.
 
 
-* [cite_start]**Rétegződés:** Az alkalmazás nem közvetlenül az operációs rendszeren (OS) fut, hanem a futtatókörnyezeten[cite: 36, 37, 38].
-* [cite_start]**Előnye:** Ugyanaz az alkalmazás futhat különböző operációs rendszereken (pl. Linux, Windows) anélkül, hogy a kódot módosítani kellene[cite: 35, 39].
-* [cite_start]**Szerepe:** Felügyeli a kódot és az adatokat, egyfajta "Wrapper"-ként (burkolórétegként) működik az OS API-ja felett[cite: 40, 41].
-* [cite_start]**Példák:** JVM (Java) és CLR (.NET)[cite: 44, 45].
+* **Rétegződés:** Az alkalmazás nem közvetlenül az operációs rendszeren (OS) fut, hanem a futtatókörnyezeten.
+* **Előnye:** Ugyanaz az alkalmazás futhat különböző operációs rendszereken (pl. Linux, Windows) anélkül, hogy a kódot módosítani kellene.
+* **Szerepe:** Felügyeli a kódot és az adatokat, egyfajta "Wrapper"-ként (burkolórétegként) működik az OS API-ja felett.
+* **Példák:** JVM (Java) és CLR (.NET).
 
 ---
 
 ## 5-8. dia: Futtatókörnyezetek jellemzői I. – Hordozhatóság és Kompaktság
-[cite_start]A modern fejlesztésben a **LIEP** (Language Independent Execution Platforms – Nyelvfüggetlen futtató platformok) vált meghatározóvá[cite: 47].
+A modern fejlesztésben a **LIEP** (Language Independent Execution Platforms – Nyelvfüggetlen futtató platformok) vált meghatározóvá.
 
-* [cite_start]**Hordozhatóság:** Az **IL (Intermediate Language – köztes nyelv)** használatával nem kell minden nyelvet minden platformra külön lefordítani[cite: 49].
-    * **Matek:** Ha van $n$ nyelvünk és $m$ platformunk, hagyományosan $n \cdot m$ fordító kellene. [cite_start]IL használatával csak $n+m$ fordító szükséges ( $n$ darab a nyelvről IL-re, $m$ darab az IL-ről platformra)[cite: 49].
-* [cite_start]**Kompaktság:** Az IL kód gyakran kisebb helyet foglal, mint az eredeti forráskód[cite: 50, 51].
-* [cite_start]**Példa (Java):** A Java, Kotlin és Scala nyelvek mind a **JVM**-re fordulnak, ami aztán Windows vagy Ubuntu környezetben futtatja őket[cite: 63, 64, 65, 85, 87, 88].
+* **Hordozhatóság:** Az **IL (Intermediate Language – köztes nyelv)** használatával nem kell minden nyelvet minden platformra külön lefordítani.
+    * **Matek:** Ha van $n$ nyelvünk és $m$ platformunk, hagyományosan $n \cdot m$ fordító kellene. IL használatával csak $n+m$ fordító szükséges ( $n$ darab a nyelvről IL-re, $m$ darab az IL-ről platformra).
+* **Kompaktság:** Az IL kód gyakran kisebb helyet foglal, mint az eredeti forráskód.
+* **Példa (Java):** A Java, Kotlin és Scala nyelvek mind a **JVM**-re fordulnak, ami aztán Windows vagy Ubuntu környezetben futtatja őket.
 
 ---
 
 ## 9. dia: Futtatókörnyezetek jellemzői II. – Hatékonyság
-[cite_start]A futtatókörnyezetek nem csupán "közvetítők", hanem optimalizálnak is[cite: 100]:
-* [cite_start]**Késői fordítás:** A köztes kód natív kódra fordítása csak az utolsó pillanatban, a célkörnyezetben történik meg[cite: 101].
-* **Dinamikus optimalizáció:** A környezet statisztikát készít a futó kódról. [cite_start]Az elején interpretáltan futtat, majd a kritikus részeket natív kódra fordítja és optimalizálja[cite: 102].
-* [cite_start]**Fejlesztői kényelem:** A programozónak nem kell ismernie az egyes platformok (pl. különböző CPU architektúrák) sajátosságait[cite: 103].
+A futtatókörnyezetek nem csupán "közvetítők", hanem optimalizálnak is:
+* **Késői fordítás:** A köztes kód natív kódra fordítása csak az utolsó pillanatban, a célkörnyezetben történik meg.
+* **Dinamikus optimalizáció:** A környezet statisztikát készít a futó kódról. Az elején interpretáltan futtat, majd a kritikus részeket natív kódra fordítja és optimalizálja.
+* **Fejlesztői kényelem:** A programozónak nem kell ismernie az egyes platformok (pl. különböző CPU architektúrák) sajátosságait.
 
 ---
 
 ## 10. dia: Futtatókörnyezetek jellemzői III. – Biztonság és Rugalmasság
 * **Biztonság:**
-    * [cite_start]**Adatellenőrzés:** Automatikus szemétgyűjtés (**Garbage Collector - GC**), ami megakadályozza a memóriaszivárgást[cite: 107].
-    * [cite_start]**Kódellenőrzés:** A hibák (pl. null pointer) azonnal kiderülnek, nem maradnak rejtve, mint a C++ esetében[cite: 108, 109].
-* [cite_start]**Együttműködés:** Könnyű a többnyelvűség támogatása (pl. egy .NET projektben lehet C# és F# kód is)[cite: 110, 111].
-* [cite_start]**Rugalmasság:** Támogatja a **metaprogramozást**, a **reflection**-t (típusok lekérdezése futásidőben) és a dinamikus kódgenerálást[cite: 112, 114].
+    * **Adatellenőrzés:** Automatikus szemétgyűjtés (**Garbage Collector - GC**), ami megakadályozza a memóriaszivárgást.
+    * **Kódellenőrzés:** A hibák (pl. null pointer) azonnal kiderülnek, nem maradnak rejtve, mint a C++ esetében.
+* **Együttműködés:** Könnyű a többnyelvűség támogatása (pl. egy .NET projektben lehet C# és F# kód is).
+* **Rugalmasság:** Támogatja a **metaprogramozást**, a **reflection**-t (típusok lekérdezése futásidőben) és a dinamikus kódgenerálást.
 
 ---
 
 ## 11-13. dia: JAVA Áttekintés (Ismétlés)
-[cite_start]A Java fő jelszava: **"Write once, run/debug anywhere"**[cite: 127].
-* [cite_start]**Modell:** Egyszerűsített objektummodell, egyszeres öröklődéssel[cite: 120, 121].
-* [cite_start]**Bytecode:** A Java compiler nem gépi kódot, hanem bytecode-ot generál, amit a **JVM** hajt végre[cite: 124, 137].
-* [cite_start]**Architektúra:** Az alkalmazás a Class Library-re és a JVM-re épül, ami alatt a Verifier és a Classloader ellenőrzi a biztonságot, mielőtt az OS-szel érintkezne [cite: 134-141].
+A Java fő jelszava: **"Write once, run/debug anywhere"**.
+* **Modell:** Egyszerűsített objektummodell, egyszeres öröklődéssel.
+* **Bytecode:** A Java compiler nem gépi kódot, hanem bytecode-ot generál, amit a **JVM** hajt végre.
+* **Architektúra:** Az alkalmazás a Class Library-re és a JVM-re épül, ami alatt a Verifier és a Classloader ellenőrzi a biztonságot, mielőtt az OS-szel érintkezne .
 
 ---
 
 ## 14-16. dia: Java tulajdonságok és JVM
-* [cite_start]**Elérhetőség:** Windows, Linux, Android, beágyazott rendszerek[cite: 144, 145].
-* [cite_start]**Eszközök:** Ingyenes compiler és runtime; népszerű IDE-k az IntelliJ és az Eclipse[cite: 146, 147].
-* [cite_start]**Biztonság:** Nincsenek pointerek (mutatók), automatikus a memóriakezelés (GC)[cite: 157, 161].
-* [cite_start]**Konkurencia:** A szálkezelés és a szinkronizáció a nyelv alapvető része[cite: 162, 163, 164].
-* [cite_start]**JVM:** A működése szabványosított, több implementációja létezik, de meg kell felelniük az Oracle specifikációinak[cite: 169, 171, 173].
+* **Elérhetőség:** Windows, Linux, Android, beágyazott rendszerek.
+* **Eszközök:** Ingyenes compiler és runtime; népszerű IDE-k az IntelliJ és az Eclipse.
+* **Biztonság:** Nincsenek pointerek (mutatók), automatikus a memóriakezelés (GC).
+* **Konkurencia:** A szálkezelés és a szinkronizáció a nyelv alapvető része.
+* **JVM:** A működése szabványosított, több implementációja létezik, de meg kell felelniük az Oracle specifikációinak.
 
 ---
 
 ## 17-18. dia: .NET alapfogalmak
-[cite_start]A .NET egy komplex keretrendszer, amelynek fő elemei[cite: 180, 181]:
-* **CLR (Common Language Runtime):** A közös nyelvi futtatókörnyezet (a .NET "motorja"). [cite_start]Ez tartalmazza a GC-t és a JIT fordítót[cite: 183, 185, 191].
-* [cite_start]**BCL (Base Class Library):** Alapvető osztálykönyvtárak (stringek, listák, fájlkezelés)[cite: 186, 193].
-* [cite_start]**NuGet:** Csomagkezelő, amivel kiegészítő könyvtárak milliói tölthetők le[cite: 195].
+A .NET egy komplex keretrendszer, amelynek fő elemei:
+* **CLR (Common Language Runtime):** A közös nyelvi futtatókörnyezet (a .NET "motorja"). Ez tartalmazza a GC-t és a JIT fordítót.
+* **BCL (Base Class Library):** Alapvető osztálykönyvtárak (stringek, listák, fájlkezelés).
+* **NuGet:** Csomagkezelő, amivel kiegészítő könyvtárak milliói tölthetők le.
 
 ---
 
 ## 19. dia: .NET technológiák és a "Unified Platform"
-[cite_start]A .NET egy egységes platformmá vált (**Unified Platform**), amely minden területet lefed[cite: 221]:
-* [cite_start]**Desktop:** WinForms, WPF, WinUI 3[cite: 205, 206, 207].
-* [cite_start]**Web/Backend:** ASP.NET Core, Blazor, Web API[cite: 200, 201, 203].
-* [cite_start]**Mobile:** MAUI (Multi-platform App UI), Xamarin[cite: 213, 214].
-* [cite_start]**Egyéb:** Unity (játékok), ML.NET (AI), IoT[cite: 216, 233, 235].
+A .NET egy egységes platformmá vált (**Unified Platform**), amely minden területet lefed:
+* **Desktop:** WinForms, WPF, WinUI 3.
+* **Web/Backend:** ASP.NET Core, Blazor, Web API.
+* **Mobile:** MAUI (Multi-platform App UI), Xamarin.
+* **Egyéb:** Unity (játékok), ML.NET (AI), IoT.
 
 ---
 
 ## 20. dia: A .NET verziótörténete
-[cite_start]A platform fejlődése három fő ágon indult, majd egyesült[cite: 247]:
-1.  [cite_start]**.NET Framework (2002-2019):** A klasszikus, Windows-specifikus ág (1.0-tól 4.8-ig)[cite: 248, 255, 257].
-2.  [cite_start]**Mono (2004-):** Nyílt forrású, keresztplatformos kezdeményezés (ezt használja a Unity és a Xamarin)[cite: 274, 275].
-3.  [cite_start]**.NET Core (2016-2019):** A modern, nyílt forrású, keresztplatformos irányvonal (1.0-tól 3.1-ig)[cite: 265, 266, 267].
-* **Egyesülés:** A .NET Core 3.1 után a név szimplán **.NET**-re változott. [cite_start]A .NET 5, 6, és a legfrissebb **.NET 10 (2025)** már az egységes jövőt képviselik[cite: 258, 259, 261].
+A platform fejlődése három fő ágon indult, majd egyesült:
+1.  **.NET Framework (2002-2019):** A klasszikus, Windows-specifikus ág (1.0-tól 4.8-ig).
+2.  **Mono (2004-):** Nyílt forrású, keresztplatformos kezdeményezés (ezt használja a Unity és a Xamarin).
+3.  **.NET Core (2016-2019):** A modern, nyílt forrású, keresztplatformos irányvonal (1.0-tól 3.1-ig).
+* **Egyesülés:** A .NET Core 3.1 után a név szimplán **.NET**-re változott. A .NET 5, 6, és a legfrissebb **.NET 10 (2025)** már az egységes jövőt képviselik.
 
 ---
 
