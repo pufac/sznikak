@@ -1,9 +1,13 @@
+![](./1_feladatsor.jpg)
+
+```csharp
 class Program
 {
 
     static object objectLock = new object();
     static int random = 0;
     static ManualResetEvent mre = new ManualResetEvent(false);
+    // VAGY AutoResetEvent, de akkor ...
 
     static void Main(string[] args)
     {
@@ -17,6 +21,7 @@ class Program
         {
             mre.WaitOne();
             Console.WriteLine("Data arrived:" + random);
+            //... itt nem kell reset
             mre.Reset();
         }
     }
@@ -47,3 +52,4 @@ class Program
         }
     }
 }
+```

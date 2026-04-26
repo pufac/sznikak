@@ -1,3 +1,6 @@
+![](./0_feladatsor.jpg)
+
+```xml
 <Grid>
     <RowDefinitions>
         <RowDefinition Height="60"/>
@@ -13,11 +16,34 @@
     <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Lorem</TextBlock>
     <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Ipsum</TextBlock>
 
-    <Button Click="Pariatur_Click" Grid.Row="0" Grid.Column="1" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="4 4 4 4">Pariatur</Button>
-    <TextBox Text="{x:Bind textValtozo, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Width="200" Margin="4 4 4 4" HorizontalAlignment="Left"></TextBox>
-    <TextBox x:Name="AlsoText" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4 4 4 4"></TextBox>
+    <Button
+        Click="Pariatur_Click"
+        Grid.Row="0"
+        Grid.Column="1"
+        Width="100"
+        Height="30"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Margin="4 4 4 4">
+        Pariatur</Button>
+    <TextBox 
+        Text="{x:Bind textValtozo, Mode=TwoWay}"
+        Grid.Row="1"
+        Grid.Column="1"
+        Width="200"
+        Margin="4 4 4 4"
+        HorizontalAlignment="Left"></TextBox>
+    <TextBox
+        x:Name="AlsoText"
+        Grid.Row="2"
+        Grid.Column="1"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Margin="4 4 4 4"></TextBox>
 </Grid>
+```
 
+```csharp
 public class MainWindow : Window
 {
     public string textValtozo {get;set;} = "";
@@ -30,7 +56,8 @@ public class MainWindow : Window
         else AlsoText.IsEnabled = false;
     }
 }
-
+```
+```xml
 <ListView>
     <ListView.ItemTemplate>
         <DataTemplate x:DataType="local:Item">
@@ -41,3 +68,4 @@ public class MainWindow : Window
         </DataTemplate>
     </ListView.ItemTemplate>
 </ListView>
+```

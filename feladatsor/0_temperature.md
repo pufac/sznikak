@@ -1,3 +1,6 @@
+![](./0_feladatsor.jpg)
+
+```csharp
 public delegate void TemperatureAlert(double temp);
 
 class TemperatureMonitor
@@ -36,3 +39,4 @@ class Program
         tm.Increase(1.0);
     }
 }
+```
